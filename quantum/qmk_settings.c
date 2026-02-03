@@ -286,6 +286,12 @@ int qmk_settings_set(uint16_t qsid, const void *setting, size_t maxsz) {
 }
 
 uint16_t qs_get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        /* Typing layer quickly */
+        case LT(1, KC_SPC):
+        case LT(2, KC_ENT):
+            return 130;
+    }
     return QS.tapping_term;
 }
 
