@@ -257,6 +257,14 @@ void matrix_scan_user(void) {
 //和自动启用阻击模式相关
 #ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
 layer_state_t layer_state_set_user(layer_state_t state) {
+    bool isLower;
+    if(get_highest_layer(state) == LAYER_LOWER){
+        isLower = true;
+    }
+    else{
+        isLower = false;
+    }
+    charybdis_set_pointer_dragscroll_enabled(isLower);
     charybdis_set_pointer_sniping_enabled(layer_state_cmp(state, CHARYBDIS_AUTO_SNIPING_ON_LAYER));
     return state;
 }
