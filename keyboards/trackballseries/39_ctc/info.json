@@ -11,6 +11,9 @@
     "rgb_matrix": {
         "driver": "ws2812"
     },
+    "build": {
+        "debounce_type": "sym_eager_pk",
+    },
     "matrix_pins": {
         "cols": ["GP4", "GP5", "GP6", "GP7", "GP8", "GP9"],
         "rows": ["GP28", "GP26", "GP12", "GP13"]

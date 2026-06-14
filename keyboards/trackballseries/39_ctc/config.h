@@ -24,7 +24,7 @@
 
 
 /* Set 0 if debouncing isn't needed. */
-#define DEBOUNCE 5
+#define DEBOUNCE 40
 
 /* Trackball angle adjustment.
 旋转角度仅支持 -127 到 127。
